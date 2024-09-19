@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Nomor 2</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 18px;
+            color: white;
+            background: linear-gradient(45deg, #4CAF50, #2196F3);
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .button:hover {
+            background: linear-gradient(45deg, #FF5722, #FFC107);
+            transform: scale(1.1);
+        }
+
+        .button:active {
+            background: linear-gradient(45deg, #2196F3, #4CAF50);
+            transform: scale(0.95);
+        }
+
+        .button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .content {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            width: 80%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .education-item {
+            margin: 10px 0;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Navigasi Web</h1>
+
+    <div class="button-container">
+        <!-- Tombol Home -->
+        <button class="button">
+            <a href="https://jtik.ft.unm.ac.id/index.php/pengumuman/index/Profil-Jurusan-Teknik-Informatika-dan-Komputer">Home</a>
+        </button>
+
+        <!-- Tombol About Me -->
+        <button class="button">
+            <a href="artikel.html">About Me</a>
+        </button>
+
+        <!-- Tombol Pendidikan -->
+        <button class="button" onclick="showEducation()">Pendidikan</button>
+
+        <!-- Tombol Jadwal Kuliah -->
+        <button class="button">
+            <a href="JadwalKuliah.html">Jadwal Kuliah</a>
+        </button>
+
+        <!-- Tombol Buku Tamu -->
+        <button class="button">
+            <a href="buku_tamu.html">Buku Tamu</a>
+        </button>
+    </div>
+
+    <div id="educationContent" class="content" style="display: none;">
+        <div class="education-item">1. SD = SDIT AL-FITYAN SCHOOL GOWA</div>
+        <div class="education-item">2. SMP = MTsN 1 KOTA MAKASSAR</div>
+        <div class="education-item">3. SMA = SMAS KARTIKA XX-I MAKASSAR</div>
+    </div>
+
+    <script>
+        // Fungsi untuk menampilkan pendidikan
+        function showEducation() {
+            var content = document.getElementById("educationContent");
+            if (content.style.display === "none") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
