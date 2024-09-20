@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Index</title>
+</head>
+<body style="background-color: #f5f5dc; margin: 0; padding: 20px;">
+
+<div style="max-width: 800px; margin: auto; background: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+    <h1 style="text-align: center; color: #8B4513;">Selamat Datang di Halaman Index</h1>
+    <a href="https://www.jtikunm.com/" style="display: inline-block; margin: 10px; padding: 10px 20px; font-size: 16px; color: white; background-color: #D2B48C; border: none; border-radius: 5px; text-decoration: none; text-align: center; transition: background-color 0.3s;" onmousedown="this.style.backgroundColor='#C19A6B';" onmouseup="this.style.backgroundColor='#D2B48C';">Home</a>
+    <a href="AliaAmini_P4.html" style="display: inline-block; margin: 10px; padding: 10px 20px; font-size: 16px; color: white; background-color: #D2B48C; border: none; border-radius: 5px; text-decoration: none; text-align: center; transition: background-color 0.3s;" onmousedown="this.style.backgroundColor='#C19A6B';" onmouseup="this.style.backgroundColor='#D2B48C';">About Me</a>
+    <a href="#" style="display: inline-block; margin: 10px; padding: 10px 20px; font-size: 16px; color: white; background-color: #D2B48C; border: none; border-radius: 5px; text-decoration: none; text-align: center; transition: background-color 0.3s;" onmousedown="this.style.backgroundColor='#C19A6B';" onmouseup="this.style.backgroundColor='#D2B48C';" onclick="showContent('education')">Pendidikan</a>
+    <a href="Jadwal_Kuliah.html" style="display: inline-block; margin: 10px; padding: 10px 20px; font-size: 16px; color: white; background-color: #D2B48C; border: none; border-radius: 5px; text-decoration: none; text-align: center; transition: background-color 0.3s;" onmousedown="this.style.backgroundColor='#C19A6B';" onmouseup="this.style.backgroundColor='#D2B48C';">Jadwal Mata Kuliah</a>
+    <a href="buku_tamu.html" style="display: inline-block; margin: 10px; padding: 10px 20px; font-size: 16px; color: white; background-color: #D2B48C; border: none; border-radius: 5px; text-decoration: none; text-align: center; transition: background-color 0.3s;" onmousedown="this.style.backgroundColor='#C19A6B';" onmouseup="this.style.backgroundColor='#D2B48C';">Buku Tamu</a>
+
+    <div id="content" style="margin-top: 20px; padding: 10px; border: 1px solid #ddd; border-radius: 5px; background: #fafafa;"></div>
+</div>
+
+<script>
+    function showContent(section) {
+        const contentDiv = document.getElementById('content');
+        let content = '';
+
+        switch (section) {
+            case 'home':
+                content = '<h2>Home</h2><p>Selamat datang di halaman utama!</p>';
+                break;
+            case 'about':
+                content = '<h2>About Me</h2><p>Ini adalah halaman tentang saya.</p>';
+                break;
+            case 'education':
+                content = `
+                    <h2>Pendidikan</h2>
+                    <ul>
+                        <li>TK Anggrek (2010-2011)</li>
+                        <li>SD Negeri Kassi-Kassi 1 (2011-2017)</li>
+                        <li>SMP Negeri 33 Makassar (2017-2020)</li>
+                        <li>SMK Telkom Makassar (2020-2023)</li>
+                    </ul>
+                `;
+                break;
+        }
+
+        contentDiv.innerHTML = content;
+    }
+</script>
+
+</body>
+</html>
